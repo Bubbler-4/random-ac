@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "random.ac",
+    "description": "A Random Defense helper for BOJ Practice",
+    "version": "0.1",
+    "permissions": ["scripting", "activeTab"],
+    "host_permissions": [
+        "https://solved.ac/",
+        "https://www.acmicpc.net/"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.acmicpc.net/group/practice/create/*"
+            ],
+            "js": [
+                "scripts/content.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ],
+    "background": {
+        "service_worker": "scripts/service-worker.js"
+    }
+}

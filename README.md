@@ -4,11 +4,19 @@ BOJ 그룹 연습에서 랜디를 더 쉽게 할 수 있도록 해 주는 브라
 
 ![](https://raw.githubusercontent.com/Bubbler-4/random-ac/a6851673729cb8bd5d92e038d51feed99df03ded/query.png)
 
-## 설치 방법 (Chrome 계열 브라우저 기준)
+## 설치 방법
+
+### Chrome 및 Chromium 계열 브라우저
 
 1. 이 레포를 `git clone`합니다.
 2. `chrome://extensions`에 들어가서 개발자 모드를 켭니다.
-3. "압축해제된 확장 프로그램 로드"를 선택하고, `git clone`하면서 생성된 폴더를 선택합니다.
+3. "압축해제된 확장 프로그램 로드"를 누르고, `chrome` 폴더를 선택합니다.
+
+### Firefox
+
+1. 이 레포를 `git clone`합니다.
+2. `about:debugging`에 들어가서 This Firefox를 선택합니다.
+3. Load temporary Add-on을 누르고, `firefox` 폴더 내의 `manifest.json`을 선택합니다.
 
 Chrome/Firefox 스토어 등록은 적당한 아이콘이 추가되면 할 예정입니다.
 
