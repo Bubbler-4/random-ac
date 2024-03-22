@@ -18,6 +18,8 @@ BOJ 그룹 연습에서 랜디를 더 쉽게 할 수 있도록 해 주는 브라
 2. `about:debugging`에 들어가서 This Firefox를 선택합니다.
 3. Load temporary Add-on을 누르고, `firefox` 폴더 내의 `manifest.json`을 선택합니다.
 
+Firefox의 temporary Add-on은 창을 끄면 사라지기 때문에 사용하기 조금 불편할 수 있습니다.
+
 Chrome/Firefox 스토어 등록은 적당한 아이콘이 추가되면 할 예정입니다.
 
 ## 사용 방법
