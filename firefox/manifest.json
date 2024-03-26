@@ -10,10 +10,7 @@
         "128": "images/128.png"
     },
     "permissions": [
-        "scripting",
-        "activeTab",
-        "https://solved.ac/*",
-        "https://www.acmicpc.net/*"
+        "https://solved.ac/*"
     ],
     "content_scripts": [
         {

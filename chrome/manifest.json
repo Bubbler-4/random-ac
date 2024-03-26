@@ -10,8 +10,7 @@
         "128": "images/128.png"
     },
     "permissions": [
-        "scripting",
-        "activeTab"
+        "scripting"
     ],
     "host_permissions": [
         "https://solved.ac/",
