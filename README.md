@@ -1,26 +1,14 @@
 # random-ac
 
+[![](https://img.shields.io/badge/Firefox-0.1.0-orange?style=for-the-badge&logo=firefox)](https://addons.mozilla.org/ko/firefox/addon/random-ac/) [![](https://img.shields.io/badge/Chrome-0.1.0-blue?style=for-the-badge&logo=google-chrome)](https://chromewebstore.google.com/detail/randomac/kdodhnnpnikopmoafeahigimagjhooba)
+
 BOJ 그룹 연습에서 랜디를 더 쉽게 할 수 있도록 해 주는 브라우저 확장입니다.
 
 ![](https://raw.githubusercontent.com/Bubbler-4/random-ac/a6851673729cb8bd5d92e038d51feed99df03ded/query.png)
 
 ## 설치 방법
 
-### Chrome 및 Chromium 계열 브라우저
-
-1. 이 레포를 `git clone`합니다.
-2. `chrome://extensions`에 들어가서 개발자 모드를 켭니다.
-3. "압축해제된 확장 프로그램 로드"를 누르고, `chrome` 폴더를 선택합니다.
-
-### Firefox
-
-1. 이 레포를 `git clone`합니다.
-2. `about:debugging`에 들어가서 This Firefox를 선택합니다.
-3. Load temporary Add-on을 누르고, `firefox` 폴더 내의 `manifest.json`을 선택합니다.
-
-Firefox의 temporary Add-on은 창을 끄면 사라지기 때문에 사용하기 조금 불편할 수 있습니다.
-
-Chrome/Firefox 스토어 등록은 적당한 아이콘이 추가되면 할 예정입니다.
+Chrome이나 Edge, Vivaldi 등 Chromium 계열 브라우저 사용자라면 Chrome web store에서, Firefox 사용자라면 Firefox addons에서 설치하여 사용하실 수 있습니다. `random.ac`라는 이름으로 검색이 안된다면 이 README 맨 위의 뱃지를 통해 들어가실 수 있습니다.
 
 ## 사용 방법
 
