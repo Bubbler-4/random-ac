@@ -62,7 +62,7 @@ function keyboardHandler(event) {
 
         (async () => {
             const { isSuccess, problems, errorMessage } = 
-                await chrome.runtime.sendMessage({ query, count });
+                await chrome.runtime.sendMessage({ query, count: numericCount });
 
             errorMessageElement.innerText = isSuccess ? '' : errorMessage;
         })();
