@@ -26,14 +26,48 @@ problemsDiv.append(queryUiElement);
 
 const queryElement = document.getElementById('random-ac-query');
 const countElement = document.getElementById('random-ac-count');
+const errorMessageElement = document.getElementById('random-ac-error-message');
 
 function keyboardHandler(event) {
     if (event.key === 'Enter') {
         event.preventDefault();
+
+        const query = queryElement.value;
+        const count = countElement.value;
+
+        if (query.length > QUERY_LENGTH_LIMIT) {
+            errorMessageElement.innerText = `쿼리가 너무 깁니다. ${QUERY_LENGTH_LIMIT}자 이하로 입력해 주세요.`;
+            queryElement.select();
+            return;
+        }
+
+        if (count.trim() === '') {
+            errorMessageElement.innerText = '개수를 입력해 주세요.';
+            countElement.select();
+            return;
+        }
+
+        if (count % 1 !== 0 || count <= 0) {
+            errorMessageElement.innerText = '추첨할 문제의 수는 양의 정수여야 합니다.';
+            countElement.select();
+            return;
+        }
+
+        if (count > PROBLEMS_COUNT_LIMIT) {
+            errorMessageElement.innerText = `문제 수가 너무 많습니다. ${PROBLEMS_COUNT_LIMIT}문제 이하로 입력해 주세요.`;
+            countElement.select();
+            return;
+        }
+
         (async () => {
-            const query = queryElement.value;
-            const count = countElement.value;
             const problems = await chrome.runtime.sendMessage({ query, count });
+
+            if (problems.length === 0) {
+                errorMessageElement.innerText = '검색 결과가 없습니다. 다른 쿼리를 입력해 보세요.';
+                queryElement.select();
+            } else {
+                errorMessageElement.innerText = '';
+            }
         })();
     }
 }
