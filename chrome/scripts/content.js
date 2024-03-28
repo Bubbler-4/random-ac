@@ -60,14 +60,10 @@ function keyboardHandler(event) {
         }
 
         (async () => {
-            const problems = await chrome.runtime.sendMessage({ query, count });
+            const { isSuccess, problems, errorMessage } = 
+                await chrome.runtime.sendMessage({ query, count });
 
-            if (problems.length === 0) {
-                errorMessageElement.innerText = '검색 결과가 없습니다. 다른 쿼리를 입력해 보세요.';
-                queryElement.select();
-            } else {
-                errorMessageElement.innerText = '';
-            }
+            errorMessageElement.innerText = isSuccess ? '' : errorMessage;
         })();
     }
 }
