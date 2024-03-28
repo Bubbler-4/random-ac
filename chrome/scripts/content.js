@@ -34,6 +34,7 @@ function keyboardHandler(event) {
 
         const query = queryElement.value;
         const count = countElement.value;
+        const numericCount = Number(count);
 
         if (query.length > QUERY_LENGTH_LIMIT) {
             errorMessageElement.innerText = `쿼리가 너무 깁니다. ${QUERY_LENGTH_LIMIT}자 이하로 입력해 주세요.`;
@@ -47,7 +48,7 @@ function keyboardHandler(event) {
             return;
         }
 
-        if (count % 1 !== 0 || count <= 0) {
+        if (isNaN(numericCount) || numericCount % 1 !== 0 || numericCount <= 0) {
             errorMessageElement.innerText = '추첨할 문제의 수는 양의 정수여야 합니다.';
             countElement.select();
             return;
